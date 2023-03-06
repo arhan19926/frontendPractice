@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import { LoggedIn } from './components/state/loggedIn';
+import { User } from './components/state/user';
+import { Counter } from './components/state/counter';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { Box } from './components/context/box';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <LoggedIn></LoggedIn>
+     <User></User>
+     <Counter></Counter>
+     <ThemeContextProvider>
+      <Box></Box>
+     </ThemeContextProvider>
     </div>
   );
 }
