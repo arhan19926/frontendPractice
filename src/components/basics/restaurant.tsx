@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Menu from "./menuApi";
 import { MenuCard } from "./MenuCard";
 import Navbar from "./navbar";
+import "./style.css"
 export const Restaurant = () => {
   const categoryList = Menu.map((c) => c.category);
 

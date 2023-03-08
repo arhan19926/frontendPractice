@@ -5,8 +5,7 @@ import { Counter } from "./components/state/counter";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { Box } from "./components/context/box";
 import "./App.css";
-import "./components/basics/style.css"
-import "../src/components/hooks/style.css"
+
 import { Restaurant } from "./components/basics/restaurant";
 import { UseState } from "./components/hooks/useState";
 function App() {
@@ -19,7 +18,7 @@ function App() {
       {/* <ThemeContextProvider>
         <Box></Box>
       </ThemeContextProvider> */}
-      {/* <Restaurant></Restaurant>       */}
+      {/* <Restaurant></Restaurant>*/}
     </div>
   );
 }
