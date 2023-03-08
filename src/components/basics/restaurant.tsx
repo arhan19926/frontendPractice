@@ -1,33 +1,28 @@
 import React, { useState } from "react";
-import image from '../../images/maggy.jpeg'
 import Menu from "./menuApi";
 import { MenuCard } from "./MenuCard";
+import Navbar from "./navbar";
 export const Restaurant = () => {
+  const categoryList = Menu.map((c) => c.category);
 
-    const [menuData,setMenuData]=useState(Menu);
-    
-    const categoryList =Menu.map((c)=>c.category);
-    const uniqueCategoryList = [Array.from(new Set(categoryList))];
-    console.log(uniqueCategoryList);
-    
+  const uniqueCategoryList = [...Array.from(new Set(categoryList)), "Misc"];
 
-    const filterItem = (category:string)=>{
-      const updatedList=Menu.filter((c)=>c.category===category);
-      setMenuData(updatedList);
+  const [menuData, setMenuData] = useState(Menu);
+  const [navList, setMenuList] = useState(uniqueCategoryList);
+
+  const filterItem = (category: string) => {
+    if (category === "Misc") {
+      setMenuData(Menu);
+      return;
     }
+    const updatedList = Menu.filter((c) => c.category === category);
+    setMenuData(updatedList);
+  };
 
   return (
     <>
-    <nav className="navbar">
-      <div className="btn-group">
-        <button className="btn-group__item" onClick={()=>filterItem("Breakfast")}>Breakfast</button>
-        <button className="btn-group__item" onClick={()=>filterItem("Lunch")}>Lunch</button>
-        <button className="btn-group__item" onClick={()=>filterItem("Brunch")}>Brunch</button>
-        <button className="btn-group__item" onClick={()=>filterItem("Dinner")}>Dinner</button>
-        <button className="btn-group__item" onClick={()=>setMenuData(Menu)}>Other</button>
-      </div>
-    </nav>
-     <MenuCard menuData={menuData}></MenuCard>
+      <Navbar filterItem={filterItem} navList={navList}></Navbar>
+      <MenuCard menuData={menuData}></MenuCard>
     </>
   );
 };

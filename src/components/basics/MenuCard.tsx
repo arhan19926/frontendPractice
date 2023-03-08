@@ -1,11 +1,11 @@
 import React from "react";
 
-export const MenuCard = ({ menuData }) => {
+export const MenuCard = ({ menuData }:any) => {
   console.log(menuData);
   return (
     <>
       <section className="main-card--container">
-        {menuData.map((CE) => {
+        {menuData.map((CE:any) => {
           const { id, name, category, image, description } = CE;
           return (
             <>

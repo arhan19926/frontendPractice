@@ -6,17 +6,20 @@ import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { Box } from "./components/context/box";
 import "./App.css";
 import "./components/basics/style.css"
+import "../src/components/hooks/style.css"
 import { Restaurant } from "./components/basics/restaurant";
+import { UseState } from "./components/hooks/useState";
 function App() {
   return (
     <div className="App">
       {/* <LoggedIn></LoggedIn>
       <User></User>
       <Counter></Counter> */}
-      <ThemeContextProvider>
+      <UseState></UseState>
+      {/* <ThemeContextProvider>
         <Box></Box>
-      </ThemeContextProvider>
-      <Restaurant></Restaurant>      
+      </ThemeContextProvider> */}
+      {/* <Restaurant></Restaurant>       */}
     </div>
   );
 }
