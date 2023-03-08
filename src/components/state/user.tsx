@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 type AuthUser = {
   name: string;
   email: string;
