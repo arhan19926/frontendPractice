@@ -1,23 +1,33 @@
-
-import "./style.css"
+import { useState } from "react";
+import "./style.css";
 export const UseState = () => {
+  const [number, setNumber] = useState(0);
+
+  const handleIncr = ()=>{
+    return setNumber(number+10);
+  }
+
+  const handleDecr = ()=>{
+    return setNumber(number-10);
+  }
+
   return (
     <>
       <div className="center_div">
-        <p>my Data</p>
-        <div className="button2">
+        <p>{number}</p>
+        <div className="button2" onClick={()=>{handleDecr()}}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          Hover me
+          DECR
         </div>
-        <div className="button2">
+        <div className="button2" onClick={()=>{handleIncr()}}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          Hover me too
+          INCR
         </div>
       </div>
     </>

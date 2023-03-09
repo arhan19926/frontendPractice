@@ -18,7 +18,7 @@ function App() {
       {/* <ThemeContextProvider>
         <Box></Box>
       </ThemeContextProvider> */}
-      {/* <Restaurant></Restaurant>*/}
+      {/* <Restaurant></Restaurant> */}
     </div>
   );
 }
