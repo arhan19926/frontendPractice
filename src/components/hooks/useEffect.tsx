@@ -1,27 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.css";
-export const UseState = () => {
+export const UseEffect = () => {
   const [number, setNumber] = useState(0);
 
   const handleIncr = ()=>{
     return setNumber(number+10);
   }
 
-  const handleDecr = ()=>{
-    return number!=0?setNumber(number-10):setNumber(0);
-  }
+  useEffect(()=>{
+    document.title = `Chats(${number})`;
+
+  },[number])
 
   return (
     <>
-      <div className="center_div">
         <p>{number}</p>
-        <div className="button2" onClick={()=>{handleDecr()}}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          DECR
-        </div>
+      <div className="center_div">
         <div className="button2" onClick={()=>{handleIncr()}}>
           <span></span>
           <span></span>

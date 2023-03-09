@@ -8,13 +8,15 @@ import "./App.css";
 
 import { Restaurant } from "./components/basics/restaurant";
 import { UseState } from "./components/hooks/useState";
+import { UseEffect } from "./components/hooks/useEffect";
 function App() {
   return (
     <div className="App">
       {/* <LoggedIn></LoggedIn>
       <User></User>
       <Counter></Counter> */}
-      <UseState></UseState>
+      {/* <UseState></UseState> */}
+      <UseEffect></UseEffect>
       {/* <ThemeContextProvider>
         <Box></Box>
       </ThemeContextProvider> */}
