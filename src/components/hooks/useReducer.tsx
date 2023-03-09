@@ -8,7 +8,6 @@ const reducer = (state: any, action: any) => {
   if (action.type === "DECR") {
     return state != 0 ? (state -= 1) : state;
   }
-  return state;
 };
 
 export const UseReducer = () => {
