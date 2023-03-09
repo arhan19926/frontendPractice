@@ -9,6 +9,7 @@ import "./App.css";
 import { Restaurant } from "./components/basics/restaurant";
 import { UseState } from "./components/hooks/useState";
 import { UseEffect } from "./components/hooks/useEffect";
+import { UseReducer } from "./components/hooks/useReducer";
 function App() {
   return (
     <div className="App">
@@ -16,7 +17,8 @@ function App() {
       <User></User>
       <Counter></Counter> */}
       {/* <UseState></UseState> */}
-      <UseEffect></UseEffect>
+      {/* <UseEffect></UseEffect> */}
+      <UseReducer/>
       {/* <ThemeContextProvider>
         <Box></Box>
       </ThemeContextProvider> */}
